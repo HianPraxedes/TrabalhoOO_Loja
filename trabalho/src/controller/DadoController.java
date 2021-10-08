@@ -1,8 +1,21 @@
 package controller;
 
+/
+ * Controle de dados
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import model.*;
 
 public class DadoController {
+    
+     /
+     * Controla os dados cadastrados do sistema
+     * @param Controle de dados
+     * @return dados alterados
+     */
+    
     private Dado d = new Dado();
 
 
