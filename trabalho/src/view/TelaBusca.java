@@ -1,5 +1,11 @@
 package view;
 
+ /
+ *  Busca pelo nome do produto desejado
+ * @author acer
+ * @Version 1.0(Out 2021)
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,6 +15,11 @@ import javax.swing.event.*;
 import view.*;
 
 public class TelaBusca extends JFrame implements ActionListener{
+	
+     /
+     * Será digitado  nome nome do produto,e então o usuário apertará o botão confirmar
+     * @return nome do produto caso ele exista no cadastro, ou false caso ele não exista
+     */
 
     private final JFrame janela = new JFrame("Busca");
     private final JLabel titulo = new JLabel("Escreva o nome do produto");
