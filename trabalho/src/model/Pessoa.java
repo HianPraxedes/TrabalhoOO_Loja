@@ -1,6 +1,12 @@
 package model;
 
+    /
+    * Dados de Pessoa
+    * @author acer
+    * @Version 1.0(Out 2021)
+    */
 import java.util.Scanner;
+
 
 import controller.DadoController;
 
@@ -9,6 +15,12 @@ import java.util.ArrayList;
 import model.Dado;
 
 public class Pessoa extends Dado {
+    
+     /
+     * Guarda dados do usuário e envia para o banco de dados
+     * @param Pessoa 
+     * @return dados guardados do usuário
+     */
 
     protected String nomePessoa;
     protected String dataNasc;
