@@ -1,5 +1,11 @@
 package view;
 
+/
+ * Lista de produto pesquisado
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,6 +16,13 @@ import view.*;
 
 
 public class TelaListaBusca extends JFrame implements ListSelectionListener {
+	
+     /
+     * essa classe mostra o produto pesquisado pelo usuário
+     * contendo seus dados cadastrais
+     * @param lista de busca
+     * @return produto pesquisado, ou espaço em branco caso não tenha tal produto
+     */
 
     private final JFrame janela = new JFrame("Lista de produtos");
     private JList<String> listaProdutosCadastrados;
