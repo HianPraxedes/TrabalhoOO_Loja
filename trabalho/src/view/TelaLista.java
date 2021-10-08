@@ -1,5 +1,11 @@
 package view;
 
+    /
+ * Lista de produtos cadastrados
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,6 +15,13 @@ import javax.swing.event.*;
 import view.*;
 
 public class TelaLista extends JFrame implements ActionListener, ListSelectionListener {
+    
+     /
+     *Essa tela mostra os produtos  cadastrado no sistema
+     *os produtos mostrados nessa lista ja foram previamente cadastrados 
+     *@param lista dos produtos cadastrados
+     *@return dados do produto escolhido
+     */
 
     private final JFrame janela = new JFrame("Lista de produtos");
     private final JLabel titulo = new JLabel("Lista de produtos");
