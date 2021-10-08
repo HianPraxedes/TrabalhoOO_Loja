@@ -1,5 +1,11 @@
 package view;
 
+ /
+ * Cadastro de Produto
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,6 +15,15 @@ import controller.*;
 import model.*;
 
 public class TelaCadastroProduto extends JFrame implements ActionListener {
+    
+     /
+     * Essa classe será utilizada para cadastro de produto
+     * tendo como dados cadastrais: marca, nome, ID, valor, quantidade, tipo de bico, material
+     * circunferencia do cano, departamentoo, altura do salto, tipo de trava, modelo do cadarço
+     * , tipo de correia, estetica, altura do cano , modelo
+     * @param cadastro
+     * @return dados do produto cadastrado no sistema
+     */
 
     private final JFrame janela = new JFrame("Cadastro de Produto");
     private final JLabel titulo = new JLabel("Cadastro");
