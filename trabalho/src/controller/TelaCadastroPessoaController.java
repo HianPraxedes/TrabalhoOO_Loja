@@ -1,5 +1,11 @@
 package controller;
 
+ /
+ * tela que controla cadastro do usuário 
+ * @author acer
+ * @Version 1.0(Out 2021)
+ */
+
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
@@ -8,6 +14,12 @@ import model.Pessoa;
 import view.TelaCadastroPessoa;
 
 public class TelaCadastroPessoaController {
+    
+     /
+     * TelaCadastroPessoaController realiza acontabilidade de um novo cadastro e retorna para o view
+     * @param controle de cadastro do usuário 
+     * @return novo cadastro no banco de cadastrados
+     */
 
     private final TelaCadastroPessoa view;
 
