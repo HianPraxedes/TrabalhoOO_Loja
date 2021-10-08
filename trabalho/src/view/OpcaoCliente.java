@@ -1,5 +1,11 @@
 package view;
 
+   /
+   * Verifica qual opção o cliente deseja
+   * @author acer
+   * @Version 1.0(Out 2021)
+   */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,6 +14,16 @@ import controller.DadoController;
 import controller.TelaMenuController;
 
 public class OpcaoCliente extends JFrame implements ActionListener{
+	
+     /
+     * Verifica qual opção será escolhida pelo cliente. Sendo essas três opções:
+     * (1)se é para ver estoque de produtos
+     * (2)se é para editar o perfil do usuário
+     * (3)se é para cadastrar produto(comprar)
+     * @param opção cliente
+     * @return menu da opção escolhida
+     */
+	
     private final JFrame janela = new JFrame("Opcao do cliente");
 	private final JLabel titulo = new JLabel("Escolha uma opcao");
 	private final static JButton buscaN = new JButton("Buscar por nome");
