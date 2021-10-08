@@ -1,5 +1,11 @@
 package view;
 
+	/
+ 	* Cadastrar usuário
+ 	* @author acer
+ 	* @Version 1.0(Out 2021)
+ 	/
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,6 +14,17 @@ import controller.*;
 import model.*;
 
 public class TelaCadastroPessoa extends JFrame implements ActionListener{
+	
+     /
+     * Essa classe será utilizada para cadastro de vendedor e aluno
+     * Os dados que serão cadastrados serão:
+     * (1) nome
+     * (2) cpf
+     * (3) data de nascimento
+     * (4) telefone
+     * @param Cadastro
+     * @return dados do usuário cadastrado no sistema
+     */
 
     private final JFrame janela = new JFrame("Cadastro de usuario");
     private final JLabel titulo = new JLabel("Cadastro");
