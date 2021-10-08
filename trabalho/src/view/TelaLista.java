@@ -1,11 +1,5 @@
 package view;
 
-    /
- * Lista de produtos cadastrados
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,14 +8,13 @@ import controller.*;
 import javax.swing.event.*;
 import view.*;
 
+/**
+ * Lista de produtos cadastrados
+ * 
+ * @author acer
+ * 
+ */
 public class TelaLista extends JFrame implements ActionListener, ListSelectionListener {
-    
-     /
-     *Essa tela mostra os produtos  cadastrado no sistema
-     *os produtos mostrados nessa lista ja foram previamente cadastrados 
-     *@param lista dos produtos cadastrados
-     *@return dados do produto escolhido
-     */
 
     private final JFrame janela = new JFrame("Lista de produtos");
     private final JLabel titulo = new JLabel("Lista de produtos");
@@ -32,6 +25,14 @@ public class TelaLista extends JFrame implements ActionListener, ListSelectionLi
     private static int x1;
     private static int o;
 
+    /**
+     * Essa tela mostra os produtos cadastrado no sistema os produtos mostrados
+     * nessa lista ja foram previamente cadastrados
+     * 
+     * @param d
+     * @param x
+     * @param op
+     */
     public TelaLista(DadoController d, int x, int op) {
         dados = d;
         x1 = x;
@@ -83,9 +84,10 @@ public class TelaLista extends JFrame implements ActionListener, ListSelectionLi
             if (e.getValueIsAdjusting() && src == listaProdutosCadastrados) {
                 TelaProduto produto = new TelaProduto(dados, listaProdutosCadastrados.getSelectedIndex());
             }
-        } else if(o == 0){
+        } else if (o == 0) {
             if (e.getValueIsAdjusting() && src == listaProdutosCadastrados) {
-                TelaEditarProduto editProduto = new TelaEditarProduto(dados, listaProdutosCadastrados.getSelectedIndex());
+                TelaEditarProduto editProduto = new TelaEditarProduto(dados,
+                        listaProdutosCadastrados.getSelectedIndex());
             }
         }
         janela.setVisible(false);

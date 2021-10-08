@@ -1,28 +1,26 @@
 package controller;
 
-/
- * Lista de produto pesquisado
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import model.Produto;
 import view.TelaLista;
 import controller.*;
 
+/**
+ * Lista de produto pesquisado
+ * 
+ * @author acer
+ * 
+ */
 public class TelaListaController {
     private String[] p;
     private int qtdPro;
     private Double[] valor;
 
-    public TelaListaController(DadoController d) {
-        
-      /
-     * Essa  classe adciona um novo produto na lista de produtos
-     * @param controle de lista de produtos
-     * @return quantidade de produto
+    /**
+     * Essa classe adciona um novo produto na lista de produtos
+     * 
+     * @param d
      */
-        
+    public TelaListaController(DadoController d) {
         p = d.getNomePro();
         qtdPro = d.getQtdPro();
         valor = d.getValor();
@@ -36,13 +34,30 @@ public class TelaListaController {
         this.qtdPro = qtdPro;
     }
 
+    /**
+     * Selecionas o nome dos produtos
+     * 
+     * @param x
+     * @return lista dos produtos
+     */
     public String[] getNomePr(int x) {
         String[] s = new String[qtdPro + x];
-        for (int i = 0; i < qtdPro + x; i++) {
-            s[i] = p[i].toString();
+        for (int i = 0; i < qtdPro; i++) {
+        	if(p[i].toString().equals(null)) {	
+        	}else {
+        		s[i] = p[i].toString();
+        	}
         }
         return s;
     }
+
+    /**
+     * Restringe os nomes de produtos que pode entrar na lista
+     * 
+     * @param nome
+     * @param x
+     * @return lista dos produtos
+     */
 
     public String[] getNomePro(String nome, int x) {
         String[] s = new String[qtdPro];
@@ -57,6 +72,13 @@ public class TelaListaController {
         return s;
     }
 
+    /**
+     * Restring os produtos que podem entrar na lista pelo valor
+     * 
+     * @param v
+     * @param x
+     * @return
+     */
     public String[] getValorPro(Double v, int x) {
         String[] s = new String[qtdPro + x];
         for (int i = 0; i < qtdPro + x; i++)

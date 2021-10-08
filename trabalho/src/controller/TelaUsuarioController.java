@@ -1,23 +1,17 @@
 package controller;
 
-/
- * Lista de usuários 
- * @author acer
- * @Version 1.0(Out 2021)
- /
+
 
 
 import model.*;
 import view.*;
+/** 
+ * Lista de usuários 
+ * @author acer
 
+ */
 public class TelaUsuarioController {
-    
-        /
-     * mostrar os dados da lista de usuários pré-cadastrado no sistema
-     * @param lista de usuários
-     * @return dados pré-cadastrados
-     */
-            
+         
     private String[] a;
     private int qtdPessoa;
     private String[] tipoUser;

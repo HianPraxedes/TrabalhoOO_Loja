@@ -1,11 +1,5 @@
 package view;
 
-/
- * Tela Menu
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,17 +8,13 @@ import controller.*;
 import view.*;
 import model.*;
 
-
+/**
+ * Tela Menu
+ * 
+ * @author acer
+ * 
+ */
 public class TelaMenu extends JFrame implements ActionListener {
-	
-	  /
-     * Tela de menu oferece 2 opções de usuário:
-     * (1)VENDEDOR
-     * (2)CLIENTE
-     * de acordo com a opção escolhida irá ser encaminhado para o menu do usuário
-     * @param Menu principal
-     * @return vendedor ou cliente
-     */
 
 	private final JFrame janela = new JFrame("Controle de usuarios");
 	private final JLabel titulo = new JLabel("Escolha seu usuario");
@@ -32,9 +22,13 @@ public class TelaMenu extends JFrame implements ActionListener {
 	private final static JButton cliente = new JButton("Cliente");
 	private final TelaMenuController controller;
 	public static DadoController dados = new DadoController();
-	private static int y=0;
-	private static int x=0;
+	private static int y = 0;
+	private static int x = 0;
 
+	/**
+	 * Tela de menu oferece 2 opcoes de usuario: (1)VENDEDOR (2)CLIENTE de acordo
+	 * com a opcao escolhida ira ser encaminhado para o menu do usuario
+	 */
 	public TelaMenu() {
 
 		this.controller = new TelaMenuController(this);
@@ -56,9 +50,10 @@ public class TelaMenu extends JFrame implements ActionListener {
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
+
 	public static void main(String[] args) throws Exception {
 		TelaMenu menu = new TelaMenu();
-		
+
 		vendedor.addActionListener(menu);
 		cliente.addActionListener(menu);
 	}
@@ -69,12 +64,12 @@ public class TelaMenu extends JFrame implements ActionListener {
 		Object botaoPressionado = e.getSource();
 
 		if (botaoPressionado == vendedor) {
-            new TelaUsuario().telaUsuario(dados,x,y,0);
-            
-        } else if (botaoPressionado == cliente){
-            new TelaUsuario().telaUsuario(dados,x,y,1);
-        
-        }
+			new TelaUsuario().telaUsuario(dados, x, y, 0);
+
+		} else if (botaoPressionado == cliente) {
+			new TelaUsuario().telaUsuario(dados, x, y, 1);
+
+		}
 
 	}
 

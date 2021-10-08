@@ -8,6 +8,12 @@ import controller.*;
 import javax.swing.event.*;
 import view.*;
 
+/**
+ * Tela para Editar dados do produto
+ * 
+ * @author acer
+ * 
+ */
 public class TelaEditarProduto implements ActionListener {
 
     private final JFrame janela = new JFrame("Cadastro de Produto");
@@ -55,6 +61,13 @@ public class TelaEditarProduto implements ActionListener {
     public static int posi;
     String recebeString;
 
+    /**
+     * Sera utilizado a TelaEditarProduto para alterar dados cadastrados no sistema
+     * de algum produto
+     * 
+     * @param d
+     * @param pos
+     */
     public TelaEditarProduto(DadoController d, int pos) {
 
         dados = d;

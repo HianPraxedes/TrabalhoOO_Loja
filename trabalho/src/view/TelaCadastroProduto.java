@@ -1,11 +1,5 @@
 package view;
 
- /
- * Cadastro de Produto
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,16 +8,13 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 import controller.*;
 import model.*;
 
+/**
+ * Cadastro de Produto
+ * 
+ * @author acer
+ * 
+ */
 public class TelaCadastroProduto extends JFrame implements ActionListener {
-    
-     /
-     * Essa classe será utilizada para cadastro de produto
-     * tendo como dados cadastrais: marca, nome, ID, valor, quantidade, tipo de bico, material
-     * circunferencia do cano, departamentoo, altura do salto, tipo de trava, modelo do cadarço
-     * , tipo de correia, estetica, altura do cano , modelo
-     * @param cadastro
-     * @return dados do produto cadastrado no sistema
-     */
 
     private final JFrame janela = new JFrame("Cadastro de Produto");
     private final JLabel titulo = new JLabel("Cadastro");
@@ -69,7 +60,17 @@ public class TelaCadastroProduto extends JFrame implements ActionListener {
     public static int x1;
     public static int y1;
 
-    public TelaCadastroProduto(DadoController d, int x,int y) {
+    /**
+     * Essa classe sera utilizada para cadastro de produto tendo como dados
+     * cadastrais: marca, nome, ID, valor, quantidade, tipo de bico, material
+     * circunferencia do cano, departamento, altura do salto, tipo de trava, modelo
+     * do cadarco , tipo de correia, estetica, altura do cano , modelo
+     * 
+     * @param d
+     * @param x
+     * @param y
+     */
+    public TelaCadastroProduto(DadoController d, int x, int y) {
 
         dados = d;
         x1 = x;
@@ -214,7 +215,6 @@ public class TelaCadastroProduto extends JFrame implements ActionListener {
         janela.setVisible(true);
 
         confirmar.addActionListener(this);
-        
 
     }
 
@@ -242,9 +242,9 @@ public class TelaCadastroProduto extends JFrame implements ActionListener {
             if (y1 == 1) {
                 String tipoBico = eTipoBico.getText().toUpperCase();
                 String material = eMaterial.getText().toUpperCase();
+                String[] a = new String[1];
                 TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,
-                        valorProduto, quantidade, tipoBico, material);
-                        System.out.println("adsfsdfdgdfhgfhfgj");
+                        valorProduto, quantidade, tipoBico, material,a);
 
                 janela.setVisible(false);
             } else if (y1 == 2) {
@@ -252,32 +252,30 @@ public class TelaCadastroProduto extends JFrame implements ActionListener {
                 Double circunfe = Double.parseDouble(sCircunfe);
                 String sAlturaSalto = eAlturaSalto.getText();
                 Double alturaSalto = Double.parseDouble(sAlturaSalto);
-                TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,
-                        valorProduto, quantidade, circunfe, alturaSalto);
-
+                String[] a = new String[1];
+                TelaCadastroController cP = new TelaCadastroController(quantidade, quantidade, dados, nome, marca, sQuantidade, tamanho, cor, valorProduto, quantidade, circunfe, alturaSalto,a);
                 janela.setVisible(false);
             } else if (y1 == 3) {
                 String departamento = eDepart.getText().toUpperCase();
                 String tipoTrava = eTipoBico.getText().toUpperCase();
                 String modeloCadar = eModelCadar.getText().toUpperCase();
-                TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,
-                        valorProduto, quantidade, departamento, tipoTrava, modeloCadar);
-
+                TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,valorProduto, quantidade, departamento, tipoTrava, modeloCadar);
                 janela.setVisible(false);
             } else if (y1 == 4) {
                 String tipoCorreia = eTipoCorreia.getText().toUpperCase();
                 String estetica = eEstet.getText().toUpperCase();
+                String[] a = new String[1];
                 TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,
-                        valorProduto, quantidade, tipoCorreia, estetica);
+                        valorProduto, quantidade, tipoCorreia, estetica,a);
 
                 janela.setVisible(false);
             } else if (y1 == 5) {
                 String sAlturaCano = eAlturaCano.getText();
                 Double alturaCano = Double.parseDouble(sAlturaCano);
                 String modelo = eModelo.getText().toUpperCase();
-                TelaCadastroController cP = new TelaCadastroController(x1, y1, dados, nome, marca, id, tamanho, cor,
-                        valorProduto, quantidade, alturaCano, modelo);
-                
+                String[] a = new String[1];
+                TelaCadastroController cP = new TelaCadastroController(quantidade, quantidade, dados, nome, marca, sQuantidade, tamanho, cor, valorProduto, quantidade, alturaCano, modelo,a);
+
                 janela.setVisible(false);
             }
         }

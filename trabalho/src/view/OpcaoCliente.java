@@ -1,11 +1,5 @@
 package view;
 
-   /
-   * Verifica qual opção o cliente deseja
-   * @author acer
-   * @Version 1.0(Out 2021)
-   */
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,51 +7,57 @@ import javax.swing.*;
 import controller.DadoController;
 import controller.TelaMenuController;
 
-public class OpcaoCliente extends JFrame implements ActionListener{
-	
-     /
-     * Verifica qual opção será escolhida pelo cliente. Sendo essas três opções:
-     * (1)se é para ver estoque de produtos
-     * (2)se é para editar o perfil do usuário
-     * (3)se é para cadastrar produto(comprar)
-     * @param opção cliente
-     * @return menu da opção escolhida
-     */
-	
-    private final JFrame janela = new JFrame("Opcao do cliente");
+/**
+ * Verifica qual opcao o cliente deseja
+ * 
+ * @author acer
+ * 
+ */
+public class OpcaoCliente extends JFrame implements ActionListener {
+
+	private final JFrame janela = new JFrame("Opcao do cliente");
 	private final JLabel titulo = new JLabel("Escolha uma opcao");
 	private final static JButton buscaN = new JButton("Buscar por nome");
 	private final static JButton buscaV = new JButton("Buscar por valor maximo");
-    private final static JButton lista = new JButton("Lista de produtos");
-    private final static JButton editar = new JButton("Editar");
+	private final static JButton lista = new JButton("Lista de produtos");
+	private final static JButton editar = new JButton("Editar");
 	public static DadoController dados;
-    public static int posi;
-    public static int x1;
+	public static int posi;
+	public static int x1;
 
-	public OpcaoCliente(DadoController d,int x, int pos) {
+	/**
+	 * Verifica qual opcao sera escolhida pelo cliente. Sendo essas tres opcoes:
+	 * (1)se e para ver estoque de produtos (2)se e para editar o perfil do usuario
+	 * (3)se e para cadastrar produto(comprar)
+	 * 
+	 * @param d
+	 * @param x
+	 * @param pos
+	 */
+	public OpcaoCliente(DadoController d, int x, int pos) {
 
-        dados=d;
-        posi=pos;
+		dados = d;
+		posi = pos;
 		x1 = x;
 
 		titulo.setFont(new Font("Arial", Font.BOLD, 15));
 		titulo.setBounds(120, 30, 150, 30);
 		lista.setBounds(100, 150, 200, 30);
-        buscaN.setBounds(100, 200, 200, 30);
-        editar.setBounds(100, 100, 200, 30);
+		buscaN.setBounds(100, 200, 200, 30);
+		editar.setBounds(100, 100, 200, 30);
 		buscaV.setBounds(100, 250, 200, 30);
 
 		janela.setLayout(null);
 
 		janela.add(titulo);
 		janela.add(lista);
-        janela.add(buscaN);
-        janela.add(editar);
+		janela.add(buscaN);
+		janela.add(editar);
 		janela.add(buscaV);
 
 		lista.addActionListener(this);
-        buscaN.addActionListener(this);
-        editar.addActionListener(this);
+		buscaN.addActionListener(this);
+		editar.addActionListener(this);
 		buscaV.addActionListener(this);
 
 		janela.setSize(400, 400);
@@ -69,18 +69,17 @@ public class OpcaoCliente extends JFrame implements ActionListener{
 
 		Object botaoPressionado = e.getSource();
 
-		if(botaoPressionado == buscaN){
-            TelaBusca busca = new TelaBusca(dados,x1);
-        
-        }else if(botaoPressionado == lista){
-            TelaLista lista = new TelaLista(dados,x1,1);
-        }else if(botaoPressionado == editar){
-            TelaEditarPessoa editar = new TelaEditarPessoa(dados,posi);
-        }else{
-			TelaBuscaValor buscaValor = new TelaBuscaValor(dados,x1);
+		if (botaoPressionado == buscaN) {
+			TelaBusca busca = new TelaBusca(dados, x1);
+
+		} else if (botaoPressionado == lista) {
+			TelaLista lista = new TelaLista(dados, x1, 1);
+		} else if (botaoPressionado == editar) {
+			TelaEditarPessoa editar = new TelaEditarPessoa(dados, posi);
+		} else {
+			TelaBuscaValor buscaValor = new TelaBuscaValor(dados, x1);
 		}
 
 	}
-
 
 }

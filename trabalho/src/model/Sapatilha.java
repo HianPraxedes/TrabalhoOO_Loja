@@ -1,29 +1,22 @@
 package model;
 
-    /
-    * Dados da sapatilha
-    * @author acer
-    * @Version 1.0(Out 2021)
-    */
-
 import java.util.Scanner;
 
+/**
+ * Dados da sapatilha
+ * 
+ * @author Hian Praxedes
+ *
+ */
 public class Sapatilha extends Produto {
-    
-     /
-     * Guarda os dados cadastrais da sapatilha , sendo ela:
-     * (1)tipo de bico
-     * (2)material
-     * @param Sapatilha
-     * @return tipo de bico, material
-     */
 
     private String tipoBico;
-    private String material;    
+    private String material;
 
     public Sapatilha() {
 
     }
+
     public String getTipoBico() {
         return tipoBico;
     }

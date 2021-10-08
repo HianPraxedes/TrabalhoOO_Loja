@@ -1,271 +1,285 @@
 package model;
 
 import controller.DadoController;
-        /
-        * Dados do sistema
-        * @author acer
-        * @Version 1.0(Out 2021)
-        */
 
-import controller.DadoController;
-
+/**
+ * 
+ * Dados do sistema
+ * 
+ * @author Hian Praxedes
+ *
+ */
 public class Dado {
-        /
-        * Guarda lista dos dados cadastrados do sistema
-        * @param Dados 
-        * @return lista dos dados cadastrados do produto ou qualquer outra opção
-        */
 
-        String listaMarca[] = new String[100];
-        String listaNome[] = new String[100];
-        int listaTamanho[] = new int[100];
-        String listaCor[] = new String[100];
-        Double listaValorProduto[] = new Double[100];
-        int listaCategoria[] = new int[100];
-        String listaTipoBico[] = new String[100];
-        String listaMaterial[] = new String[100];
-        Double listaCircunferenciaCano[] = new Double[100];
-        Double listaAlturaSalto[] = new Double[100];
-        String listaDepartamento[] = new String[100];
-        String listaTipoTrava[] = new String[100];
-        String listaModeloCadarco[] = new String[100];
-        String listaTipoCorreia[] = new String[100];
-        String listaEstetica[] = new String[100];
-        Double listaAlturaCano[] = new Double[100];
-        String listaModelo[] = new String[100];
-        String listaNomePessoa[] = new String[100];
-        String listaDataNasc[] = new String[100];
-        String listaCpf[] = new String[100];
-        String listaTelefone[] = new String[100];
-        String listaTipoUsuario[] = new String[100];
-        public int numPessoasCadas = 0; 
-        public int numProdutosCadas = 0; 
-        int listaQuantidade[] = new int[100];
-        String listaId[] = new String[100];
+    String listaMarca[] = new String[100];
+    String listaNome[] = new String[100];
+    int listaTamanho[] = new int[100];
+    String listaCor[] = new String[100];
+    Double listaValorProduto[] = new Double[100];
+    int listaCategoria[] = new int[100];
+    String listaTipoBico[] = new String[100];
+    String listaMaterial[] = new String[100];
+    Double listaCircunferenciaCano[] = new Double[100];
+    Double listaAlturaSalto[] = new Double[100];
+    String listaDepartamento[] = new String[100];
+    String listaTipoTrava[] = new String[100];
+    String listaModeloCadarco[] = new String[100];
+    String listaTipoCorreia[] = new String[100];
+    String listaEstetica[] = new String[100];
+    Double listaAlturaCano[] = new Double[100];
+    String listaModelo[] = new String[100];
+    String listaNomePessoa[] = new String[100];
+    String listaDataNasc[] = new String[100];
+    String listaCpf[] = new String[100];
+    String listaTelefone[] = new String[100];
+    String listaTipoUsuario[] = new String[100];
+    public int numPessoasCadas = 0;
+    public int numProdutosCadas = 0;
+    int listaQuantidade[] = new int[100];
+    String listaId[] = new String[100];
 
-        public void cadastroPessoa(String nome,String cpf,String dataNasc,String telefone, int pos, String tipoUsuario) {
-            this.listaNomePessoa[pos] = nome;
-            this.listaCpf[pos] = cpf;
-            this.listaDataNasc[pos] = dataNasc;
-            this.listaTelefone[pos] = telefone;
-            this.listaTipoUsuario[pos] = tipoUsuario;
-            if(pos == numPessoasCadas) numPessoasCadas++;
-        }
+    public String[] getListaMarca() {
+        return listaMarca;
+    }
 
-        public String[] getListaMarca() {
-            return listaMarca;
-        }
+    public void setListaMarca(String[] listaMarca) {
+        this.listaMarca = listaMarca;
+    }
 
-        public void setListaMarca(String[] listaMarca) {
-            this.listaMarca = listaMarca;
-        }
+    public String[] getListaNome() {
+        return listaNome;
+    }
 
-        public String[] getListaNome() {
-            return listaNome;
-        }
+    public void setListaNome(String[] listaNome) {
+        this.listaNome = listaNome;
+    }
 
-        public void setListaNome(String[] listaNome) {
-            this.listaNome = listaNome;
-        }
+    public int[] getListaTamanho() {
+        return listaTamanho;
+    }
 
-        public int[] getListaTamanho() {
-            return listaTamanho;
-        }
+    public int getNumPessoasCadas() {
+        return numPessoasCadas;
+    }
 
-        public int getNumPessoasCadas() {
-            return numPessoasCadas;
-        }
+    public void setNumPessoasCadas(int numPessoasCadas) {
+        this.numPessoasCadas = numPessoasCadas;
+    }
 
-        public void setNumPessoasCadas(int numPessoasCadas) {
-            this.numPessoasCadas = numPessoasCadas;
-        }
+    public void setListaTamanho(int[] listaTamanho) {
+        this.listaTamanho = listaTamanho;
+    }
 
-        public void setListaTamanho(int[] listaTamanho) {
-            this.listaTamanho = listaTamanho;
-        }
+    public String[] getListaCor() {
+        /**
+         * Guarda lista dos dados cadastrados do sistema
+         * 
+         * @param
+         * @return lista de cor
+         */
+        return listaCor;
+    }
 
-        public String[] getListaCor() {
-            return listaCor;
-        }
+    public void setListaCor(String[] listaCor) {
+        this.listaCor = listaCor;
+    }
 
-        public void setListaCor(String[] listaCor) {
-            this.listaCor = listaCor;
-        }
+    public Double[] getListaValorProduto() {
+        return listaValorProduto;
+    }
 
-        public Double[] getListaValorProduto() {
-            return listaValorProduto;
-        }
+    public void setListaValorProduto(Double[] listaValorProduto) {
+        this.listaValorProduto = listaValorProduto;
+    }
 
-        public void setListaValorProduto(Double[] listaValorProduto) {
-            this.listaValorProduto = listaValorProduto;
-        }
+    public int[] getListaCategoria() {
+        return listaCategoria;
+    }
 
-        public int[] getListaCategoria() {
-            return listaCategoria;
-        }
+    public void setListaCategoria(int[] listaCategoria) {
+        this.listaCategoria = listaCategoria;
+    }
 
-        public void setListaCategoria(int[] listaCategoria) {
-            this.listaCategoria = listaCategoria;
-        }
+    public String[] getListaTipoBico() {
+        return listaTipoBico;
+    }
 
-        public String[] getListaTipoBico() {
-            return listaTipoBico;
-        }
+    public void setListaTipoBico(String[] listaTipoBico) {
+        this.listaTipoBico = listaTipoBico;
+    }
 
-        public void setListaTipoBico(String[] listaTipoBico) {
-            this.listaTipoBico = listaTipoBico;
-        }
+    public String[] getListaMaterial() {
 
-        public String[] getListaMaterial() {
-            return listaMaterial;
-        }
+        /**
+         * Guarda lista dos dados cadastrados do sistema
+         * 
+         * @param
+         * @return lista de material
+         */
 
-        public void setListaMaterial(String[] listaMaterial) {
-            this.listaMaterial = listaMaterial;
-        }
+        return listaMaterial;
+    }
 
-        public Double[] getListaCircunferenciaCano() {
-            return listaCircunferenciaCano;
-        }
+    public void setListaMaterial(String[] listaMaterial) {
+        this.listaMaterial = listaMaterial;
+    }
 
-        public void setListaCircunferenciaCano(Double[] listaCircunferenciaCano) {
-            this.listaCircunferenciaCano = listaCircunferenciaCano;
-        }
+    public Double[] getListaCircunferenciaCano() {
+        return listaCircunferenciaCano;
+    }
 
-        public Double[] getListaAlturaSalto() {
-            return listaAlturaSalto;
-        }
+    public void setListaCircunferenciaCano(Double[] listaCircunferenciaCano) {
+        this.listaCircunferenciaCano = listaCircunferenciaCano;
+    }
 
-        public void setListaAlturaSalto(Double[] listaAlturaSalto) {
-            this.listaAlturaSalto = listaAlturaSalto;
-        }
+    public Double[] getListaAlturaSalto() {
+        return listaAlturaSalto;
+    }
 
-        public String[] getListaDepartamento() {
-            return listaDepartamento;
-        }
+    public void setListaAlturaSalto(Double[] listaAlturaSalto) {
+        this.listaAlturaSalto = listaAlturaSalto;
+    }
 
-        public void setListaDepartamento(String[] listaDepartamento) {
-            this.listaDepartamento = listaDepartamento;
-        }
+    public String[] getListaDepartamento() {
+        /**
+         * Guarda lista dos dados cadastrados do sistema
+         * 
+         * @param
+         * @return lista de departamentos
+         */
+        return listaDepartamento;
+    }
 
-        public String[] getListaTipoTrava() {
-            return listaTipoTrava;
-        }
+    public void setListaDepartamento(String[] listaDepartamento) {
+        this.listaDepartamento = listaDepartamento;
+    }
 
-        public void setListaTipoTrava(String[] listaTipoTrava) {
-            this.listaTipoTrava = listaTipoTrava;
-        }
+    public String[] getListaTipoTrava() {
+        return listaTipoTrava;
+    }
 
-        public String[] getListaModeloCadarco() {
-            return listaModeloCadarco;
-        }
+    public void setListaTipoTrava(String[] listaTipoTrava) {
+        this.listaTipoTrava = listaTipoTrava;
+    }
 
-        public void setListaModeloCadarco(String[] listaModeloCadarco) {
-            this.listaModeloCadarco = listaModeloCadarco;
-        }
+    public String[] getListaModeloCadarco() {
+        return listaModeloCadarco;
+    }
 
-        public String[] getListaTipoCorreia() {
-            return listaTipoCorreia;
-        }
+    public void setListaModeloCadarco(String[] listaModeloCadarco) {
+        this.listaModeloCadarco = listaModeloCadarco;
+    }
 
-        public void setListaTipoCorreia(String[] listaTipoCorreia) {
-            this.listaTipoCorreia = listaTipoCorreia;
-        }
+    public String[] getListaTipoCorreia() {
+        return listaTipoCorreia;
+    }
 
-        public String[] getListaEstetica() {
-            return listaEstetica;
-        }
+    public void setListaTipoCorreia(String[] listaTipoCorreia) {
+        this.listaTipoCorreia = listaTipoCorreia;
+    }
 
-        public void setListaEstetica(String[] listaEstetica) {
-            this.listaEstetica = listaEstetica;
-        }
+    public String[] getListaEstetica() {
+        return listaEstetica;
+    }
 
-        public Double[] getListaAlturaCano() {
-            return listaAlturaCano;
-        }
+    public void setListaEstetica(String[] listaEstetica) {
+        this.listaEstetica = listaEstetica;
+    }
 
-        public void setListaAlturaCano(Double[] listaAlturaCano) {
-            this.listaAlturaCano = listaAlturaCano;
-        }
+    public Double[] getListaAlturaCano() {
+        return listaAlturaCano;
+    }
 
-        public String[] getListaModelo() {
-            return listaModelo;
-        }
+    public void setListaAlturaCano(Double[] listaAlturaCano) {
+        this.listaAlturaCano = listaAlturaCano;
+    }
 
-        public void setListaModelo(String[] listaModelo) {
-            this.listaModelo = listaModelo;
-        }
+    public String[] getListaModelo() {
+        return listaModelo;
+    }
 
-        public String[] getListaNomePessoa() {
-            return listaNomePessoa;
-        }
+    public void setListaModelo(String[] listaModelo) {
+        this.listaModelo = listaModelo;
+    }
 
-        public void setListaNomePessoa(String[] listaNomePessoa) {
-            this.listaNomePessoa = listaNomePessoa;
-        }
+    public String[] getListaNomePessoa() {
 
-        public String[] getListaDataNasc() {
-            return listaDataNasc;
-        }
+        /**
+         * Guarda lista dos dados cadastrados do sistema
+         * 
+         * @param
+         * @return lista de nome de pessoas
+         */
 
-        public void setListaDataNasc(String[] listaDataNasc) {
-            this.listaDataNasc = listaDataNasc;
-        }
+        return listaNomePessoa;
+    }
 
-        public String[] getListaCpf() {
-            return listaCpf;
-        }
+    public void setListaNomePessoa(String[] listaNomePessoa) {
+        this.listaNomePessoa = listaNomePessoa;
+    }
 
-        public void setListaCpf(String[] listaCpf) {
-            this.listaCpf = listaCpf;
-        }
+    public String[] getListaDataNasc() {
+        return listaDataNasc;
+    }
 
-        public String[] getListaTelefone() {
-            return listaTelefone;
-        }
+    public void setListaDataNasc(String[] listaDataNasc) {
+        this.listaDataNasc = listaDataNasc;
+    }
 
-        public void setListaTelefone(String[] listaTelefone) {
-            this.listaTelefone = listaTelefone;
-        }
+    public String[] getListaCpf() {
+        return listaCpf;
+    }
 
-        public String[] getListaTipoUsuario() {
-            return listaTipoUsuario;
-        }
+    public void setListaCpf(String[] listaCpf) {
+        this.listaCpf = listaCpf;
+    }
 
-        public void setListaTipoUsuario(String[] listaTipoUsuario) {
-            this.listaTipoUsuario = listaTipoUsuario;
-        }
+    public String[] getListaTelefone() {
+        return listaTelefone;
+    }
 
-        public int[] getListaQuantidade() {
-            return listaQuantidade;
-        }
+    public void setListaTelefone(String[] listaTelefone) {
+        this.listaTelefone = listaTelefone;
+    }
 
-        public void setListaQuantidade(int[] listaQuantidade) {
-            this.listaQuantidade = listaQuantidade;
-        }
+    public String[] getListaTipoUsuario() {
+        return listaTipoUsuario;
+    }
 
-        public String[] getListaId() {
-            return listaId;
-        }
+    public void setListaTipoUsuario(String[] listaTipoUsuario) {
+        this.listaTipoUsuario = listaTipoUsuario;
+    }
 
-        public void setListaId(String[] listaId) {
-            this.listaId = listaId;
-        }
+    public int[] getListaQuantidade() {
+        return listaQuantidade;
+    }
+
+    public void setListaQuantidade(int[] listaQuantidade) {
+        this.listaQuantidade = listaQuantidade;
+    }
+
+    public String[] getListaId() {
+        return listaId;
+    }
+
+    public void setListaId(String[] listaId) {
+        this.listaId = listaId;
+    }
 
     public int getNumProdutosCadas() {
-            return numProdutosCadas;
-        }
+        return numProdutosCadas;
+    }
 
-        public void setNumProdutosCadas(int numProdutosCadas) {
-            this.numProdutosCadas = numProdutosCadas;
-        }
+    public void setNumProdutosCadas(int numProdutosCadas) {
+        this.numProdutosCadas = numProdutosCadas;
+    }
 
     public Dado() {
 
         numPessoasCadas = 3;
-        numProdutosCadas = 15; 
+        numProdutosCadas = 15;
 
-        //Sapatilhas
+        // Sapatilhas
         listaNome[0] = "SAPATILHA MOLECA LISTRADA";
         listaId[0] = "S1";
         listaMarca[0] = "MOLECA";
@@ -284,7 +298,7 @@ public class Dado {
         listaCor[1] = "PRETO";
         listaValorProduto[1] = 109.99;
         listaTipoBico[1] = "QUADRADO";
-        listaMaterial[1] =  "COURO";
+        listaMaterial[1] = "COURO";
         listaQuantidade[1] = 3;
         listaCategoria[1] = 1;
 
@@ -299,7 +313,7 @@ public class Dado {
         listaQuantidade[2] = 6;
         listaCategoria[2] = 1;
 
-        //BOTA
+        // BOTA
         listaNome[3] = "COTURNO PEGADA TRATORADO SHERPA";
         listaId[3] = "B1";
         listaMarca[3] = "PEGADA";
@@ -333,7 +347,7 @@ public class Dado {
         listaQuantidade[5] = 8;
         listaCategoria[5] = 2;
 
-        //CHUTEIRAS
+        // CHUTEIRAS
         listaNome[6] = "CHUTEIRA SOCIETY NIKE BECO 2 TF";
         listaId[6] = "C1";
         listaMarca[6] = "NIKE";
@@ -349,7 +363,7 @@ public class Dado {
         listaNome[7] = "CHUTEIRA BOTINHA SOCIETY";
         listaId[7] = "C2";
         listaMarca[7] = "FRONTINNI";
-        listaTamanho[7] =40;
+        listaTamanho[7] = 40;
         listaCor[7] = "LARANJA";
         listaValorProduto[7] = 109.90;
         listaQuantidade[7] = 8;
@@ -370,7 +384,7 @@ public class Dado {
         listaModeloCadarco[8] = "TRADICINAL";
         listaCategoria[8] = 3;
 
-        //CHINELO
+        // CHINELO
 
         listaNome[9] = "CHINELO HOKA ONE ONE ORA RECOVERY SLIDE";
         listaId[9] = "CH1";
@@ -380,7 +394,7 @@ public class Dado {
         listaValorProduto[9] = 400.0;
         listaQuantidade[9] = 8;
         listaTipoCorreia[9] = "TIRA LARGA";
-        listaEstetica[9]= "LISO";
+        listaEstetica[9] = "LISO";
         listaCategoria[9] = 4;
 
         listaNome[10] = "SANDALIA FEMENINO MODARE SENSE FLEX";
@@ -402,10 +416,10 @@ public class Dado {
         listaValorProduto[11] = 44.90;
         listaQuantidade[11] = 8;
         listaTipoCorreia[11] = "TRADICIONAL";
-        listaEstetica[11]= "ESTAMPADA";
+        listaEstetica[11] = "ESTAMPADA";
         listaCategoria[11] = 4;
 
-        //TENIS
+        // TENIS
 
         listaNome[12] = "TENIS NIKE PRECISION V";
         listaId[12] = "T1";
@@ -417,7 +431,7 @@ public class Dado {
         listaAlturaCano[12] = 0.0;
         listaModelo[12] = "ESPORTIVO";
         listaCategoria[12] = 5;
-        
+
         listaNome[13] = "TENIS ALL STAR CONVERSE CHUCK TAYLOR";
         listaId[13] = "T2";
         listaMarca[13] = "ALL STAR CONVERSE";
@@ -440,13 +454,13 @@ public class Dado {
         listaModelo[14] = "CANO ALTO";
         listaCategoria[14] = 5;
 
-        //PESSOAS
+        // PESSOAS
 
         listaNomePessoa[0] = "SAMUEL VICTOR";
         listaCpf[0] = "11111111111";
         listaDataNasc[0] = "10/05/1999";
         listaTelefone[0] = "(61)98564-1546";
-        listaTipoUsuario[0]= "VENDEDOR";
+        listaTipoUsuario[0] = "VENDEDOR";
 
         listaNomePessoa[1] = "GABRIEL CARDOSO";
         listaCpf[1] = "22222222222";
@@ -458,7 +472,7 @@ public class Dado {
         listaCpf[2] = "33333333333";
         listaDataNasc[2] = "02/12/1998";
         listaTelefone[2] = "(61)983054789";
-        listaTipoUsuario[2]= "CLIENTE";
+        listaTipoUsuario[2] = "CLIENTE";
     }
 
     public void Dado() {

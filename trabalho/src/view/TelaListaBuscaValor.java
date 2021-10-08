@@ -8,7 +8,12 @@ import controller.*;
 import javax.swing.event.*;
 import view.*;
 
-
+/**
+ * Lista de produtos por preco
+ * 
+ * @author acer
+ * 
+ */
 public class TelaListaBuscaValor extends JFrame implements ListSelectionListener {
 
     private final JFrame janela = new JFrame("Lista de produtos");
@@ -16,7 +21,16 @@ public class TelaListaBuscaValor extends JFrame implements ListSelectionListener
     String[] nomeProduto = new String[100];
     private static DadoController dados;
 
-    public TelaListaBuscaValor(DadoController d,int x, Double valorPro){
+    /**
+     * Essa classe mostra o produto pesquisado pelo usuario com valores menores ou
+     * igual ao pesquisado
+     * 
+     * @param d
+     * @param x
+     * @param valorPro
+     */
+    public TelaListaBuscaValor(DadoController d, int x, Double valorPro) {
+
         dados = d;
 
         nomeProduto = new TelaListaController(dados).getValorPro(valorPro, x);
@@ -34,17 +48,17 @@ public class TelaListaBuscaValor extends JFrame implements ListSelectionListener
         janela.setVisible(true);
 
         listaProdutosCadastrados.addListSelectionListener(this);
-    } 
+    }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
         Object src = e.getSource();
 
-		if(e.getValueIsAdjusting() && src == listaProdutosCadastrados) {
-			TelaProduto produto = new TelaProduto(dados,listaProdutosCadastrados.getSelectedIndex());
-		}
+        if (e.getValueIsAdjusting() && src == listaProdutosCadastrados) {
+            TelaProduto produto = new TelaProduto(dados, listaProdutosCadastrados.getSelectedIndex());
+        }
         janela.setVisible(false);
-        
+
     }
-    
+
 }

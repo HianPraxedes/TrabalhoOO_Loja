@@ -1,25 +1,18 @@
 package controller;
 
-/
- * Controle de dados
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import model.*;
 
+/**
+ * Controle de dados
+ * 
+ * @author acer
+ * 
+ */
 public class DadoController {
-    
-     /
-     * Controla os dados cadastrados do sistema
-     * @param Controle de dados
-     * @return dados alterados
-     */
-    
+
     private Dado d = new Dado();
 
-
-    public DadoController(){
+    public DadoController() {
         d.Dado();
     }
 
@@ -31,88 +24,112 @@ public class DadoController {
         this.d = d;
     }
 
-    public String[] getPessoas(){
+    public String[] getPessoas() {
         return this.d.getListaNomePessoa();
     }
-    public int getQtdPessoas(){
+
+    public int getQtdPessoas() {
         return this.d.numPessoasCadas;
     }
-    public String[] getCpf(){
+
+    public String[] getCpf() {
         return this.d.getListaCpf();
     }
-    public String[] getTipoDatNas(){
+
+    public String[] getTipoDatNas() {
         return this.d.getListaDataNasc();
     }
-    public String[] getTel(){
+
+    public String[] getTel() {
         return this.d.getListaTelefone();
     }
-    public String[] getTipoUser(){
+
+    public String[] getTipoUser() {
         return this.d.getListaTipoUsuario();
     }
-    public int getNumPessoasCad(){
+
+    public int getNumPessoasCad() {
         return this.d.getNumPessoasCadas();
     }
-    public String[] getNomePro(){
+
+    public String[] getNomePro() {
         return this.d.getListaNome();
     }
-    public int getQtdPro(){
+
+    public int getQtdPro() {
         return this.d.getNumProdutosCadas();
     }
-    public String[] getTipBico(){
+
+    public String[] getTipBico() {
         return this.d.getListaTipoBico();
     }
-    public String[] getMat(){
+
+    public String[] getMat() {
         return this.d.getListaMaterial();
     }
-    public Double[] getCircunfCano(){
+
+    public Double[] getCircunfCano() {
         return this.d.getListaCircunferenciaCano();
     }
-    public Double[] getAltSalto(){
+
+    public Double[] getAltSalto() {
         return this.d.getListaAlturaSalto();
     }
-    public String[] getDepart(){
+
+    public String[] getDepart() {
         return this.d.getListaDepartamento();
     }
-    public String[] getTipoTrava(){
+
+    public String[] getTipoTrava() {
         return this.d.getListaTipoTrava();
     }
-    public String[] getModelCadarco(){
+
+    public String[] getModelCadarco() {
         return this.d.getListaModeloCadarco();
     }
-    public String[] getTipoCorrreia(){
+
+    public String[] getTipoCorrreia() {
         return this.d.getListaTipoCorreia();
     }
-    public String[] getEstet(){
+
+    public String[] getEstet() {
         return this.d.getListaEstetica();
     }
-    public Double[] getAltCano(){
+
+    public Double[] getAltCano() {
         return this.d.getListaAlturaCano();
     }
-    public String[] getModel(){
+
+    public String[] getModel() {
         return this.d.getListaModelo();
     }
-    public String[] getId(){
+
+    public String[] getId() {
         return this.d.getListaId();
     }
-    public String[] getMarca(){
+
+    public String[] getMarca() {
         return this.d.getListaMarca();
     }
-    public Double[] getValor(){
+
+    public Double[] getValor() {
         return this.d.getListaValorProduto();
     }
-    public String[] getCor(){
+
+    public String[] getCor() {
         return this.d.getListaCor();
     }
-    public int[] getTamanho(){
+
+    public int[] getTamanho() {
         return this.d.getListaTamanho();
     }
-    public int[] getCategoria(){
+
+    public int[] getCategoria() {
         return this.d.getListaCategoria();
     }
-    public int[] getQTdProEst(){
+
+    public int[] getQTdProEst() {
         return this.d.getListaQuantidade();
     }
-
-
 
 }

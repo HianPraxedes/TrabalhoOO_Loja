@@ -1,21 +1,13 @@
 package model;
 
-     /
-     * Dados da chuteira
-     * @author acer
-     * @Version 1.0(Out 2021)
-     */
-
+/**
+ * Dados da chuteira
+ * 
+ * @author Hian Praxedes
+ * 
+ */
 
 public class Chuteira extends Produto {
-
-     /
-     * Guarda os dados cadastrais do chuteira, sendo ela:
-     * (1)departamento
-     * (2)tipo de trava
-     * @param Chuteira
-     * @return departamento, tipo de trava
-     */
 
     String departamento;
     String tipoTrava;

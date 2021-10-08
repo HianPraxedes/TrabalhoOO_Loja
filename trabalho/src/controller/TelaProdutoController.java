@@ -1,20 +1,15 @@
 package controller;
 
-/
- * Controle da telaProduto
- * @author acer
- * @Version 1.0(Out 2021)
- */
-
 import model.Produto;
 
+/**
+ * Controle da telaProduto
+ * 
+ * @author acer
+ * 
+ */
 public class TelaProdutoController {
-    
-    /
-     * recebe a quantidade de produtos cadastrados
-     * @return quantidade de produtos cadastrados
-     */
-    
+
     private String[] p;
     private int qtdProdutosCadas;
     private String[] id;
@@ -35,8 +30,8 @@ public class TelaProdutoController {
     private String[] model;
     private int[] qtdProdutos;
 
-    public TelaProdutoController(){
-       
+    public TelaProdutoController() {
+
     }
 
     public int getQtdProdutosCadas() {

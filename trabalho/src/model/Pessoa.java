@@ -1,12 +1,6 @@
 package model;
 
-    /
-    * Dados de Pessoa
-    * @author acer
-    * @Version 1.0(Out 2021)
-    */
 import java.util.Scanner;
-
 
 import controller.DadoController;
 
@@ -14,13 +8,13 @@ import java.util.List;
 import java.util.ArrayList;
 import model.Dado;
 
+/**
+ * Dados das pessoas
+ * 
+ * @author Hian Praxedes
+ *
+ */
 public class Pessoa extends Dado {
-    
-     /
-     * Guarda dados do usuário e envia para o banco de dados
-     * @param Pessoa 
-     * @return dados guardados do usuário
-     */
 
     protected String nomePessoa;
     protected String dataNasc;
@@ -37,17 +31,26 @@ public class Pessoa extends Dado {
         setCpf(cpf);
 
     }
-    public Pessoa(DadoController d, int o, int pos, String nP, String c, String dN, String tel) {
-        
+
+    /**
+     * Esse metodo recebe os dados do usuario e salva
+     * 
+     * @param nP
+     * @param c
+     * @param dN
+     * @param tel
+     */
+    public Pessoa(String nP, String c, String dN, String tel) {
+
         nomePessoa = nP;
         dataNasc = dN;
         cpf = c;
         telefone = tel;
-        totalPessoas = pos;
-       
+
     }
-    public String toString(){
-        
+
+    public String toString() {
+
         return nomePessoa;
     }
 

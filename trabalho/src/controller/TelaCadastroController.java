@@ -1,10 +1,6 @@
 package controller;
 
-/
- * tela controle de cadastros 
- * @author acer
- * @Version 1.0(Out 2021)
- /
+
 
 import java.awt.event.ActionEvent;
 
@@ -13,16 +9,27 @@ import javax.swing.JButton;
 import view.*;
 import controller.*;
 import model.*;
-
+/**
+ * tela controle de cadastros
+ * 
+ * @author acer
+ * 
+ */
 public class TelaCadastroController {
     
-     /
+  /**
      * Guarda lista dos dados cadastrados do sistema
-     * @param Dados 
-     * @return lista dos dados cadastrados do produto ou qualquer outra opção
+     * 
+     * @param d
+     * @param o
+     * @param pos
+     * @param nP
+     * @param c
+     * @param dN
+     * @param tel
+     * @param y
      */
-
-    public TelaCadastroController(DadoController d, int o, int pos, String nP, String c, String dN, String tel, int y) {
+    public TelaCadastroController(DadoController d, int o, int pos, String nP, String c, String dN, String tel, int y,String[] dado) {
 
         d.getPessoas()[d.getNumPessoasCad() + y] = nP;
         d.getCpf()[d.getNumPessoasCad() + y] = c;
@@ -33,6 +40,11 @@ public class TelaCadastroController {
         } else {
             d.getTipoUser()[d.getNumPessoasCad() + y] = "VENDEDOR";
         }
+
+        dado[0]=d.getPessoas()[d.getNumPessoasCad() + y];
+        dado[1]= d.getCpf()[d.getNumPessoasCad() + y];
+        dado[2]=d.getTel()[d.getNumPessoasCad() + y];
+
     }
 
     public TelaCadastroController(DadoController d, int pos, String nP, String c, String dN, String tel) {
@@ -65,7 +77,7 @@ public class TelaCadastroController {
     }
 
     public TelaCadastroController(int x, int y, DadoController d, String nome, String marca, String id, int tamanho,
-            String cor, Double valorProduto, int quantidade, String tipoBico, String material) {
+            String cor, Double valorProduto, int quantidade, String tipoBico, String material,String[] nomeP) {
 
         d.getNomePro()[d.getQtdPro() + x] = nome;
         d.getMarca()[d.getQtdPro() + x] = marca;
@@ -81,10 +93,12 @@ public class TelaCadastroController {
             d.getTipoCorrreia()[d.getQtdPro() + x] = tipoBico;
             d.getEstet()[d.getQtdPro() + x] = material;
         }
+        
+        nomeP[0]= d.getNomePro()[d.getQtdPro() + x];
     }
 
     public TelaCadastroController(int x, int y, DadoController d, String nome, String marca, String id, int tamanho,
-            String cor, Double valorProduto, int quantidade, Double circunfe, Double alturaSalto) {
+            String cor, Double valorProduto, int quantidade, Double circunfe, Double alturaSalto,String[] valorP) {
         d.getNomePro()[d.getQtdPro() + x] = nome;
         d.getMarca()[d.getQtdPro() + x] = marca;
         d.getId()[d.getQtdPro() + x] = id;
@@ -94,6 +108,8 @@ public class TelaCadastroController {
         d.getQTdProEst()[d.getQtdPro() + x] = quantidade;
         d.getCircunfCano()[d.getQtdPro() + x] = circunfe;
         d.getAltSalto()[d.getQtdPro() + x] = alturaSalto;
+        
+        valorP[0] = String.valueOf(d.getValor()[d.getQtdPro() + x]);
     }
 
     public TelaCadastroController(int x, int y, DadoController d, String nome, String marca, String id, int tamanho,
@@ -112,7 +128,7 @@ public class TelaCadastroController {
     }
 
     public TelaCadastroController(int x, int y, DadoController d, String nome, String marca, String id, int tamanho,
-            String cor, Double valorProduto, int quantidade, Double alturaCano, String modelo) {
+            String cor, Double valorProduto, int quantidade, Double alturaCano, String modelo, String[] qtdP) {
         d.getNomePro()[d.getQtdPro() + x] = nome;
         d.getMarca()[d.getQtdPro() + x] = marca;
         d.getId()[d.getQtdPro() + x] = id;
@@ -122,6 +138,8 @@ public class TelaCadastroController {
         d.getQTdProEst()[d.getQtdPro() + x] = quantidade;
         d.getAltCano()[d.getQtdPro() + x] = alturaCano;
         d.getModel()[d.getQtdPro() + x] = modelo;
+        
+        qtdP[0] = String.valueOf(d.getQTdProEst()[d.getQtdPro() + x]);
 
     }
 

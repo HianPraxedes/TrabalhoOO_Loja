@@ -1,11 +1,5 @@
 package view;
 
-	/
- 	* Cadastrar usuário
- 	* @author acer
- 	* @Version 1.0(Out 2021)
- 	/
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -13,18 +7,12 @@ import javax.swing.*;
 import controller.*;
 import model.*;
 
-public class TelaCadastroPessoa extends JFrame implements ActionListener{
-	
-     /
-     * Essa classe será utilizada para cadastro de vendedor e aluno
-     * Os dados que serão cadastrados serão:
-     * (1) nome
-     * (2) cpf
-     * (3) data de nascimento
-     * (4) telefone
-     * @param Cadastro
-     * @return dados do usuário cadastrado no sistema
-     */
+/**
+ * Cadastrar usuario
+ * 
+ * @author acer
+ */
+public class TelaCadastroPessoa extends JFrame implements ActionListener {
 
     private final JFrame janela = new JFrame("Cadastro de usuario");
     private final JLabel titulo = new JLabel("Cadastro");
@@ -40,21 +28,27 @@ public class TelaCadastroPessoa extends JFrame implements ActionListener{
     public static DadoController dados;
     public static int o;
     public static int y1;
-    
 
-    public TelaCadastroPessoa(DadoController d,int op,int y){
+    /**
+     * * Essa classe será utilizada para cadastro de vendedor e cliente 
+     * 
+     * @param d
+     * @param op
+     * @param y
+     */
+    public TelaCadastroPessoa(DadoController d, int op, int y) {
         super();
 
         dados = d;
         o = op;
-        y1=y;
+        y1 = y;
 
         titulo.setFont(new Font("Arial", Font.BOLD, 20));
         titulo.setBounds(250, 30, 150, 30);
         nome.setFont(new Font("Arial", Font.BOLD, 15));
-		nome.setBounds(10, 100, 100, 30);
+        nome.setBounds(10, 100, 100, 30);
         cpf.setFont(new Font("Arial", Font.BOLD, 15));
-		cpf.setBounds(10, 150, 100, 30);
+        cpf.setBounds(10, 150, 100, 30);
         dataNasc.setFont(new Font("Arial", Font.BOLD, 15));
         dataNasc.setBounds(10, 200, 250, 30);
         telefone.setFont(new Font("Arial", Font.BOLD, 15));
@@ -68,26 +62,26 @@ public class TelaCadastroPessoa extends JFrame implements ActionListener{
         confirmar.setBounds(450, 350, 100, 30);
 
         janela.setLayout(null);
-		
-		janela.add(titulo);
-		janela.add(nome);
-		janela.add(cpf);
+
+        janela.add(titulo);
+        janela.add(nome);
+        janela.add(cpf);
         janela.add(dataNasc);
         janela.add(telefone);
         janela.add(eNome);
-		janela.add(eCpf);
+        janela.add(eCpf);
         janela.add(eDataNasc);
         janela.add(eTelefone);
         janela.add(confirmar);
-        
+
         eNome.addActionListener(this);
-		eCpf.addActionListener(this);
+        eCpf.addActionListener(this);
         eDataNasc.addActionListener(this);
-		eTelefone.addActionListener(this);
+        eTelefone.addActionListener(this);
         confirmar.addActionListener(this);
-		
-		janela.setSize(600, 450);
-		janela.setVisible(true);
+
+        janela.setSize(600, 450);
+        janela.setVisible(true);
 
     }
 
@@ -97,22 +91,22 @@ public class TelaCadastroPessoa extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-    
-        JButton botaoPressionado = (JButton) e.getSource();
-    
-        if(botaoPressionado == confirmar){
-        String nomePessoa = eNome.getText().toUpperCase();
-        String cpf = eCpf.getText().toUpperCase();
-        String dataNasc = eDataNasc.getText().toUpperCase();
-        String telefone = eTelefone.getText().toUpperCase();
-        int qtdPessoa = dados.getQtdPessoas();
 
-        TelaCadastroController telaCadastroController = new TelaCadastroController(dados,o, qtdPessoa, nomePessoa, cpf, dataNasc, telefone, y1);
-        janela.setVisible(false);
-        
+        JButton botaoPressionado = (JButton) e.getSource();
+
+        if (botaoPressionado == confirmar) {
+            String nomePessoa = eNome.getText().toUpperCase();
+            String cpf = eCpf.getText().toUpperCase();
+            String dataNasc = eDataNasc.getText().toUpperCase();
+            String telefone = eTelefone.getText().toUpperCase();
+            int qtdPessoa = dados.getQtdPessoas();
+            String [] a = new String [3];
+            TelaCadastroController telaCadastroController = new TelaCadastroController(dados, o, qtdPessoa, nomePessoa,
+                    cpf, dataNasc, telefone, y1,a);
+            janela.setVisible(false);
+
         }
-        
-        
+
     }
 
     public JButton getConfirmar() {

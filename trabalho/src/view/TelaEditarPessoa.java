@@ -1,11 +1,5 @@
 package view;
 
-/
- * Tela para Editar dados do usuário
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,15 +8,14 @@ import controller.*;
 import javax.swing.event.*;
 import view.*;
 
+/**
+ * Tela para Editar dados do usuário
+ * 
+ * @author acer
+ *
+ */
 public class TelaEditarPessoa implements ActionListener {
-	
-	/
-  * Será utilizado a TelaEditarPessoas para alterar
-  * dados cadastrados no sistema de algum vendedor eou cliente
-  * @param Editar dados cadatrais do usuário
-  * @return novos dados cadastrados no sistema para o usuário escolhido
-  */
-	  
+
     private final JFrame janela = new JFrame("Edicao de usuario");
     private final JLabel titulo = new JLabel("Edicao");
     private final JButton confirmar = new JButton("Confirmar");
@@ -37,18 +30,24 @@ public class TelaEditarPessoa implements ActionListener {
     private final JLabel telefone = new JLabel("Telefone: ");
     public static DadoController dados;
     public static int posi;
-    
 
-    public TelaEditarPessoa(DadoController d, int pos){
+    /**
+     * Sera utilizado a TelaEditarPessoas para alterar dados cadastrados no sistema
+     * de algum vendedor e/ou cliente
+     * 
+     * @param d
+     * @param pos
+     */
+    public TelaEditarPessoa(DadoController d, int pos) {
         dados = d;
         posi = pos;
 
         titulo.setFont(new Font("Arial", Font.BOLD, 20));
         titulo.setBounds(250, 30, 150, 30);
         nome.setFont(new Font("Arial", Font.BOLD, 15));
-		nome.setBounds(10, 100, 100, 30);
+        nome.setBounds(10, 100, 100, 30);
         cpf.setFont(new Font("Arial", Font.BOLD, 15));
-		cpf.setBounds(10, 150, 100, 30);
+        cpf.setBounds(10, 150, 100, 30);
         dataNasc.setFont(new Font("Arial", Font.BOLD, 15));
         dataNasc.setBounds(10, 200, 250, 30);
         telefone.setFont(new Font("Arial", Font.BOLD, 15));
@@ -67,48 +66,48 @@ public class TelaEditarPessoa implements ActionListener {
         apagar.setBounds(250, 350, 100, 30);
 
         janela.setLayout(null);
-		
-		janela.add(titulo);
-		janela.add(nome);
-		janela.add(cpf);
+
+        janela.add(titulo);
+        janela.add(nome);
+        janela.add(cpf);
         janela.add(dataNasc);
         janela.add(telefone);
         janela.add(eNome);
-		janela.add(eCpf);
+        janela.add(eCpf);
         janela.add(eDataNasc);
         janela.add(eTelefone);
         janela.add(confirmar);
         janela.add(apagar);
-        
+
         eNome.addActionListener(this);
-		eCpf.addActionListener(this);
+        eCpf.addActionListener(this);
         eDataNasc.addActionListener(this);
-		eTelefone.addActionListener(this);
+        eTelefone.addActionListener(this);
         confirmar.addActionListener(this);
         apagar.addActionListener(this);
-		
-		janela.setSize(600, 450);
-		janela.setVisible(true);
+
+        janela.setSize(600, 450);
+        janela.setVisible(true);
 
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object src = e.getSource();
 
-        if(src == confirmar){
+        if (src == confirmar) {
             String nomePessoa = eNome.getText().toUpperCase();
             String cpf = eCpf.getText().toUpperCase();
             String dataNasc = eDataNasc.getText().toUpperCase();
             String telefone = eTelefone.getText().toUpperCase();
-    
-            TelaCadastroController telaCadastroController = new TelaCadastroController(dados, posi, nomePessoa, cpf, dataNasc, telefone);
+
+            TelaCadastroController telaCadastroController = new TelaCadastroController(dados, posi, nomePessoa, cpf,
+                    dataNasc, telefone);
             janela.setVisible(false);
-        }else{
+        } else {
             TelaCadastroController telaCadastroController = new TelaCadastroController(dados, posi);
             janela.setVisible(false);
         }
-        
+
     }
 }

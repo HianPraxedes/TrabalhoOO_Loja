@@ -1,11 +1,5 @@
 package view;
 
-/
- * Lista de usuários cadastrados
- * @author acer
- * @Version 1.0(Out 2021)
- /
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,15 +8,14 @@ import controller.*;
 import javax.swing.event.*;
 import view.*;
 
+/**
+ * Lista de usuarios cadastrados
+ * 
+ * @author acer
+ * 
+ */
 public class TelaUsuario extends JFrame implements ActionListener, ListSelectionListener {
-     
-     /
-     * Lista de usuários mostra usuários pré cadastrados
-     * e a opção de cadastrar um novo usuário
-     * @param lista de usuários cadastrados
-     * @return usuário pré cadastrado, cadastro de usuário, atualizar
-     */
-        
+
     private final JFrame janela = new JFrame("Lista de usuarios");
     private final JLabel titulo = new JLabel("Escolha seu usuario");
     private JList<String> listaUsuariosCadastrados;
@@ -36,10 +29,20 @@ public class TelaUsuario extends JFrame implements ActionListener, ListSelection
     private static int o;
     private static int x1;
 
-    public void telaUsuario(DadoController d,int x,int y, int op) {
+    /**
+     * Lista de usuarios mostra usuarios pre-cadastrados e a opcao de cadastrar um
+     * novo usuario
+     * 
+     * @param d
+     * @param x
+     * @param y
+     * @param op
+     */
+    public void telaUsuario(DadoController d, int x, int y, int op) {
+
         dados = d;
         o = op;
-        x1=x;
+        x1 = x;
         y1 = y;
 
         switch (op) {
@@ -101,7 +104,7 @@ public class TelaUsuario extends JFrame implements ActionListener, ListSelection
                 listaUsuariosCadastrados.addListSelectionListener(this);
                 break;
         }
-        
+
     }
 
     @Override
@@ -131,9 +134,9 @@ public class TelaUsuario extends JFrame implements ActionListener, ListSelection
         Object src = e.getSource();
 
         if (e.getValueIsAdjusting() && src == listaUsuariosCadastrados && o == 1) {
-            OpcaoCliente opcao = new OpcaoCliente(dados,x1,listaUsuariosCadastrados.getSelectedIndex());
+            OpcaoCliente opcao = new OpcaoCliente(dados, x1, listaUsuariosCadastrados.getSelectedIndex());
         } else if (e.getValueIsAdjusting() && src == listaUsuariosCadastrados && o == 0) {
-            OpcaoVendedor opcao = new OpcaoVendedor(dados,x1, listaUsuariosCadastrados.getSelectedIndex());
+            OpcaoVendedor opcao = new OpcaoVendedor(dados, x1, listaUsuariosCadastrados.getSelectedIndex());
         }
     }
 
