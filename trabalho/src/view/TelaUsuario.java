@@ -1,5 +1,11 @@
 package view;
 
+/
+ * Lista de usuários cadastrados
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,7 +15,14 @@ import javax.swing.event.*;
 import view.*;
 
 public class TelaUsuario extends JFrame implements ActionListener, ListSelectionListener {
-
+     
+     /
+     * Lista de usuários mostra usuários pré cadastrados
+     * e a opção de cadastrar um novo usuário
+     * @param lista de usuários cadastrados
+     * @return usuário pré cadastrado, cadastro de usuário, atualizar
+     */
+        
     private final JFrame janela = new JFrame("Lista de usuarios");
     private final JLabel titulo = new JLabel("Escolha seu usuario");
     private JList<String> listaUsuariosCadastrados;
