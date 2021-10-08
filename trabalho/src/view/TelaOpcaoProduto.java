@@ -1,5 +1,11 @@
 package view;
 
+/
+ * Opção do produto
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,6 +14,13 @@ import controller.DadoController;
 import controller.TelaMenuController;
 
 public class TelaOpcaoProduto extends JFrame implements ActionListener{
+	
+     /
+     * Tela mostra as opções de cadastro de produto pelo cliente
+     * sendo essas opções:Sapatilha, bota, chuteira, chinelo, tenis
+     * @param menu opção de produtos
+     * @return produto escolhido pelo usuário
+     */
     
     private final JFrame janela = new JFrame("Opcao do cliente");
 	private final JLabel titulo = new JLabel("Escolha uma opcao");
