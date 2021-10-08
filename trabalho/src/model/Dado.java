@@ -1,8 +1,20 @@
 package model;
 
 import controller.DadoController;
+        /
+        * Dados do sistema
+        * @author acer
+        * @Version 1.0(Out 2021)
+        */
+
+import controller.DadoController;
 
 public class Dado {
+        /
+        * Guarda lista dos dados cadastrados do sistema
+        * @param Dados 
+        * @return lista dos dados cadastrados do produto ou qualquer outra opção
+        */
 
         String listaMarca[] = new String[100];
         String listaNome[] = new String[100];
