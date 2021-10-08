@@ -1,5 +1,11 @@
 package controller;
 
+/
+ * Lista de produto pesquisado
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import model.Produto;
 import view.TelaLista;
 import controller.*;
@@ -10,6 +16,13 @@ public class TelaListaController {
     private Double[] valor;
 
     public TelaListaController(DadoController d) {
+        
+      /
+     * Essa  classe adciona um novo produto na lista de produtos
+     * @param controle de lista de produtos
+     * @return quantidade de produto
+     */
+        
         p = d.getNomePro();
         qtdPro = d.getQtdPro();
         valor = d.getValor();
