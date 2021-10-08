@@ -1,5 +1,11 @@
 package view;
 
+/
+ * Tela Menu
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,6 +16,15 @@ import model.*;
 
 
 public class TelaMenu extends JFrame implements ActionListener {
+	
+	  /
+     * Tela de menu oferece 2 opções de usuário:
+     * (1)VENDEDOR
+     * (2)CLIENTE
+     * de acordo com a opção escolhida irá ser encaminhado para o menu do usuário
+     * @param Menu principal
+     * @return vendedor ou cliente
+     */
 
 	private final JFrame janela = new JFrame("Controle de usuarios");
 	private final JLabel titulo = new JLabel("Escolha seu usuario");
