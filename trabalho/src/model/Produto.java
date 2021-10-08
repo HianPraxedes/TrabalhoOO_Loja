@@ -1,10 +1,23 @@
 package model;
 
+    /
+    * caracterista dos produtos
+    * @author acer
+    * @Version 1.0(Out 2021)
+    */
+
 import java.util.Scanner;
 
 import javax.swing.Spring;
 
 public abstract class Produto {
+    
+     /
+     * Guarda dados/característa dos produtos como:
+     * marca, tamanho, id, nome, valor do produto...
+     * @param Produto
+     * @return dados guardados dos produtos
+     */
 
     String marca;
     String nome;
