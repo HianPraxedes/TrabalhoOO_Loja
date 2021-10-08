@@ -1,5 +1,11 @@
 package view;
 
+/
+ * Tela para Editar dados do usuário
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,6 +15,14 @@ import javax.swing.event.*;
 import view.*;
 
 public class TelaEditarPessoa implements ActionListener {
+	
+	/
+  * Será utilizado a TelaEditarPessoas para alterar
+  * dados cadastrados no sistema de algum vendedor eou cliente
+  * @param Editar dados cadatrais do usuário
+  * @return novos dados cadastrados no sistema para o usuário escolhido
+  */
+	  
     private final JFrame janela = new JFrame("Edicao de usuario");
     private final JLabel titulo = new JLabel("Edicao");
     private final JButton confirmar = new JButton("Confirmar");
