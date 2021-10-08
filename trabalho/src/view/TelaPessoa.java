@@ -1,5 +1,11 @@
 package view;
 
+/
+ * dados de produtos pré-cadastrados
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,6 +15,14 @@ import controller.TelaPessoaController;
 import view.*;
 
 public class TelaPessoa extends JFrame implements ActionListener {
+	 
+     /
+     * Tela produto mostra os dados cadastrais de produtos
+     * pré cadastrados na lista de produtos
+     * contendo: nome, id , marca...
+     * @param perfil do produto
+     * @return dados do produto cadastrado
+     */
 
     private final JFrame janela = new JFrame("Controle de usuarios");
     private final JLabel titulo = new JLabel("Voce ja e cadastrado?");
