@@ -1,5 +1,11 @@
 package controller;
 
+/
+ * tela controle de cadastros 
+ * @author acer
+ * @Version 1.0(Out 2021)
+ /
+
 import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
@@ -9,6 +15,12 @@ import controller.*;
 import model.*;
 
 public class TelaCadastroController {
+    
+     /
+     * Guarda lista dos dados cadastrados do sistema
+     * @param Dados 
+     * @return lista dos dados cadastrados do produto ou qualquer outra opção
+     */
 
     public TelaCadastroController(DadoController d, int o, int pos, String nP, String c, String dN, String tel, int y) {
 
